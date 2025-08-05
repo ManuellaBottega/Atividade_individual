@@ -9,10 +9,10 @@ function adicionarContatos (contatos, prompt, menu){
     let telefone
         do {
             telefone = prompt('Telefone: ');
-            if (isNaN(telefone) || telefone.trim() === '') {
-                console.log('Numero invalido, tente novamente.\n')
+            if (!/^[0-9-]+$/.test(telefone) || telefone.trim() === '') {
+                console.log('Numero invalido, tente novamente.\n');
             }
-        } while (isNaN(telefone) || telefone.trim() === '')
+        } while (!/^[0-9-]+$/.test(telefone) || telefone.trim() === '');
     let email
         do {
             email = prompt('Email: ')

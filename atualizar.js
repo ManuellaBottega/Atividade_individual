@@ -4,8 +4,8 @@ function atualizarContatos (contatos, prompt, menu) {
         ${contato.telefone}, Email: ${contato.email}`);
         });
 
-    let remover = prompt ('\nDigite o id do contato que deseja atualizar: ')
-    const index = parseInt(remover, 10) - 1;
+    let atualizar = prompt ('\nDigite o id do contato que deseja atualizar: ')
+    const index = contatos.findIndex(contato => contato.id === parseInt(atualizar, 10))
 
     if (index >= 0 && index < contatos.length) {
         let novoNome
@@ -18,10 +18,10 @@ function atualizarContatos (contatos, prompt, menu) {
         let novoTelefone
             do {
                 novoTelefone = prompt('Telefone: ');
-                if (isNaN(novoTelefone) || novoTelefone.trim() === '') {
-                    console.log('Numero invalido, tente novamente.\n')
+                if (!/^[0-9-]+$/.test(novoTelefone) || novoTelefone.trim() === '') {
+                    console.log('Numero invalido, tente novamente.\n');
                 }
-            } while (isNaN(novoTelefone) || novoTelefone.trim() === '')
+            } while (!/^[0-9-]+$/.test(novoTelefone) || novoTelefone.trim() === '');
         let novoEmail
             do {
                 novoEmail = prompt('Email: ')
