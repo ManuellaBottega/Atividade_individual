@@ -1,8 +1,4 @@
 function atualizarContatos (contatos, prompt, menu) {
-    let novoNome
-    let novoTelefone
-    let novoEmail
-
     contatos.forEach(contato => {
         console.log(`ID: ${contato.id}, Nome: ${contato.nome}, Telefone:
         ${contato.telefone}, Email: ${contato.email}`);
@@ -12,13 +8,27 @@ function atualizarContatos (contatos, prompt, menu) {
     const index = parseInt(remover, 10) - 1;
 
     if (index >= 0 && index < contatos.length) {
-        let novoNome = prompt ('digite o novo nome: ')
-        let novoTelefone = prompt ('digite o novo telefone: ')
-        if (isNaN(novoTelefone)) {
-            console.log('Numero invalido, tente novamente.\n')
-            atualizarContatos(contatos, prompt, menu)
-        }
-        let novoEmail = prompt ('digite o novo email: ')
+        let novoNome
+            do {
+                novoNome = prompt('Nome: ')
+                if (novoNome.trim() === '') {
+                    console.log('Numero invalido, tente novamente.\n')
+                }
+            } while (novoNome.trim() === '')
+        let novoTelefone
+            do {
+                novoTelefone = prompt('Telefone: ');
+                if (isNaN(novoTelefone) || novoTelefone.trim() === '') {
+                    console.log('Numero invalido, tente novamente.\n')
+                }
+            } while (isNaN(novoTelefone) || novoTelefone.trim() === '')
+        let novoEmail
+            do {
+                novoEmail = prompt('Email: ')
+                if (novoEmail.trim() === '') {
+                    console.log('Numero invalido, tente novamente.\n')
+                }
+            } while (novoEmail.trim() === '')
 
         contatos[index] = {
             nome : novoNome,
