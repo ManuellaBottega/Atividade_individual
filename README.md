@@ -1,7 +1,9 @@
 Manuella das Neves Bottega
 
-Respostas
-1.
+Perguntas descritivas:
+
+1. Primeiro, let contatos cria uma array de objetos que funciona como um banco de dados temporario, sendo cada objeto, um contato contendo id, telefone, nome e email como chaves que admitem um unico valor. Então, existe uma funçao listarContatos que é chamada no fim do codigo, assim iniciando imeditamente ao iniciar o index.js, essa função consiste em utilizar forEach para percorrer o array contatos, usando o parametro contato que funciona como uma variável temporária para se referir a cada objeto dentro do array contatos à medida que o loop avança. Para cada item do array, o forEach usa o parâmetro contato para acessar as propriedades de casa um dos contatos, como id, nome, telefone e email, os printando em uma lista formatada.
+
 
 2. Toda chamada da função prompt pode ser considerada entrada, e todo comando console.log pode ser considerado saída.
 
