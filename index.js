@@ -11,9 +11,9 @@ function menu(contatos) {
     console.log ('2. Listar contatos')
     console.log ('3. Atualizar contato')
     console.log ('4. Remover contato')
-    console.log ('5. Sair')
+    console.log ('5. Sair\n')
 
-    let opcao = prompt ('\nDigite a opção que deseja executar: ')
+    let opcao = prompt ('Digite a opção que deseja executar: ')
     switch (opcao) {
         case '1':
             adicionarContatos(contatos, prompt, menu)
