@@ -3,7 +3,7 @@ function adicionarContatos (contatos, prompt, menu){
         do {
             nome = prompt('Nome: ')
             if (nome.trim() === '') {
-                console.log('Numero invalido, tente novamente.\n')
+                console.log('Nome invalido, tente novamente.\n')
             }
         } while (nome.trim() === '')
     let telefone
@@ -17,7 +17,7 @@ function adicionarContatos (contatos, prompt, menu){
         do {
             email = prompt('Email: ')
             if (email.trim() === '') {
-                console.log('Numero invalido, tente novamente.\n')
+                console.log('Email invalido, tente novamente.\n')
             }
         } while (email.trim() === '')
 
